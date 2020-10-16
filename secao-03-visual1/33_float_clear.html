@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float e Clear</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        #container {
+            background-color: #ccc;
+            width: 80%;            
+            padding: 15px;
+        }
+
+        #container div {
+            width: 150px;
+            height: 50px;
+            border: 2px solid red;
+            margin: 5px;
+        }
+
+        #div2 {
+            float: right;
+        }
+
+        #div3 {
+            background-color: yellow;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <h1>Float e Clear</h1>    
+    <div id="container">
+        <div id="div1">div1</div>
+        <div id="div2">div2</div>
+        <div id="div3">div3</div>
+    </div>
+</body>
+</html>
