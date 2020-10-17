@@ -23,6 +23,13 @@ body {
     text-shadow: 3px 3px 2px #333c;
 }
 
+.hero-content p {
+    border-bottom: 3px solid white;
+    padding: 15px;
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.5)
+}
+
 nav ul {    
     text-align: right;
     margin: 25px 25px 0 0;
@@ -57,8 +64,32 @@ main {
 
 .content-section {
     background-color: white;
-    padding: 15px;
+    padding: 10px;
     margin-top: 15px;
+    overflow: auto;
+}
+
+.card {
+    width: 32%;
+    float: left;
+    box-sizing: border-box;    
+}
+
+.card-right {
+    margin-right: 2%;
+}
+
+.card img {
+    display: block;
+    width: 100%;
+}
+
+.card p {
+    letter-spacing: 2px;
+    background-color: rgb(44, 44, 44);
+    color: white;
+    margin: 0;
+    padding: 15px;
 }
 
 .content-header {

@@ -1,0 +1,153 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#container {    
+    margin: 10px auto;
+    width: 80%;
+    box-sizing: border-box;
+    overflow: auto;
+}
+
+.header {
+    height:500px;
+    background-image: url("../imagens/topo.jpg");
+    background-position: left top;
+    background-size: cover;
+}
+
+.header-top {
+    position: relative;
+    height: 50px;
+    background-color: #162028;
+}
+
+.logotipo {
+    position: absolute;
+    left: 20%;
+    top: 10px;
+}
+
+.header-nav {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+}
+
+.header-nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+.header-nav li {
+    display: inline-block;
+    margin-right: 15px;
+    padding: 15px;
+}
+
+.header-nav a {
+    text-decoration: none;
+    color: #425564;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 16px;
+    transition: color .3s linear;
+}
+
+.header-nav a:hover {
+    color: white;
+}
+
+.portfolio {
+    padding: 50px 100px;
+    text-align: center;
+}
+
+.portfolio h1 {
+    font-size: 36px;
+}
+
+.portfolio p {
+    line-height: 1.5;
+    color: #555;
+}
+
+.gallery {
+    overflow: auto;
+}
+
+.card {
+    width: 32%;
+    float: left;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.card-right {
+    margin-right: 2%;
+}
+
+.card img {
+    width: 100%;
+    display: block;
+}
+
+.card h2 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.card p {
+    color: #555;
+}
+
+.about {
+    margin-top: 50px;
+    height: 450px;
+    background-color: #003d52;
+    background-image: url("../imagens/bg_detalhe.png");
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    padding: 50px 100px;
+    color: white;
+}
+
+.about h2 {
+    font-size: 50px;
+    text-transform: uppercase;
+}
+
+.about p {
+    line-height: 1.5;
+}
+
+.contact {
+    margin: 50px 0;
+    text-align: center;
+}
+
+.contact address {
+    font-style: normal;
+    color: #003d52;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 26px;
+}
+
+.map {
+    margin-top: 20px;
+}
+
+.map iframe {
+    width: 100%;
+}
+
+footer {
+    background-color: black;
+    color: #425564;
+    text-align: center;
+    padding: 15px;
+}
