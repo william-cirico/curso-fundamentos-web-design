@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seletores Compostos</title>
+    <style>
+        div {
+            border: 3px solid red;
+            position: relative;
+        }
+
+        div::before {
+            content: "before: ";
+        }
+
+        div::after {
+            content: "";
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background-color: red;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+    <div>Texto principal da div</div>
+    <article>
+        <h3>Título</h3>
+        <p>Parágrafo <a href="#">um link com <b>negrito</b></a></p>
+        <p>Parágrafo <a href="#">um link com <b>negrito</b></a></p>
+        <p>Parágrafo <a href="#">um link com <b>negrito</b></a></p>
+    </article>
+    <hr>
+    <ul>
+        <li><a href="#">Link Falso</a></li>
+        <li><a href="#">Link Falso</a></li>
+        <li><a href="http://www.google.com" target="_blank">Link Externo</a></li>
+        <li><a href="seletores_compostos.html">Link Interno</a></li>
+    </ul>
+</body>
+</html>

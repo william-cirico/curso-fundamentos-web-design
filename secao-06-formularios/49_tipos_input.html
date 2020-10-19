@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipos Input</title>
+</head>
+<body>
+    <h1>Tipos de Inputs</h1>
+
+    <form action="" method="GET">
+        <fieldset>
+            <legend>Tipos de Input</legend>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" autocomplete="off"
+            required><br>
+            <label for="child">Número de Filhos</label>
+            <input type="number" id="child" name="child" min="0" max="30"><br>
+            <label for="born">Data de Nascimento</label>
+            <input type="date" name="born" id="born"><br>
+            <p>Sexo</p>
+            <label>
+                <input type="radio" name="sexo" id="masculino" value="m">
+                Masculino
+            </label>
+            <label>
+                <input type="radio" name="sexo" id="feminino" value="f">
+                Feminino
+            </label><br>
+            <label for="estado">Estado</label>
+            <select name="estado" id="estado">
+                <option selected disabled>Selecione</option>
+                <option value="sp">São Paulo</option>
+                <option value="sc">Santa Catarina</option>
+                <option value="rs">Rio do Sul</option>
+            </select>            
+            
+            <input type="submit" value="Enviar">
+        </fieldset>
+
+        <fieldset>
+            <legend>Área de interesse</legend>
+            <label>
+                <input type="checkbox" name="html">
+                HTML
+            </label>
+            <label>
+                <input type="checkbox" name="css">
+                CSS
+            </label>
+        </fieldset>
+        <fieldset>
+            <legend>Mensagem</legend>
+
+            <textarea name="mensagem" id="mensagem" cols="30" rows="10"
+            style="resize: none;" placeholder="Digite sua mensagem"></textarea>
+
+            <label for="contrato"></label>
+            <textarea name="contrato" id="mensagem" cols="30" rows="10"
+            style="resize: none;" readonly>Aqui está o contrato 
+            </textarea>
+
+            <input type="reset" value="Limpar">
+        </fieldset>
+    </form>
+</body>
+</html>

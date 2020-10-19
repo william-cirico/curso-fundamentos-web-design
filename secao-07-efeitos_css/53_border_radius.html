@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Border-Radius</title>
+
+    <style>
+        body {
+            text-align: center;
+            width: 80%;
+            margin: auto;
+            border: 1px solid red;
+        }
+
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: grey;
+            margin: auto;
+            margin-top: 20px;
+        }
+
+        #radius1 {
+            border-radius: 50%;
+        }
+
+        #radius2 {
+            border-radius: 10% 20% 30% 40%;
+        }
+
+        #radius3 {
+            border-radius: 50% 100% / 100% 50%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Border Radius</h1>
+
+    <div id="radius1"></div>
+    <div id="radius2"></div>
+    <div id="radius3"></div>
+
+</body>
+</html>

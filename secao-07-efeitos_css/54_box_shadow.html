@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box-Shadow</title>
+    <style>
+        body {            
+            text-align: center;
+            margin: auto;
+        }
+
+        div {    
+            width: 200px;
+            height: 200px;
+            margin: auto;
+            margin-top: 40px;
+            background-color: pink;
+        }
+
+        #div1 {
+            box-shadow: 10px 10px 0 black;
+        }
+
+        #div2 {
+            box-shadow: -10px -10px 10px black;
+        }
+
+        #div3 {
+            box-shadow: 30px 30px 0 30px black,
+            -30px -30px 0 red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Box-Shadow</h1>
+    <div id="div1"></div>
+    <div id="div2"></div>
+    <div id="div3"></div>
+</body>    
+</html>

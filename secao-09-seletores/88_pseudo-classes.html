@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-Classes</title>
+
+    <style>
+        input[type="checkbox"] {
+            height: 100px;
+            width: 100px;
+        }
+        
+        input[type="checkbox"]:checked {
+            height: 50px;
+            width: 50px;
+        }
+
+        button:disabled {
+            background-color: teal;
+        }
+
+        p {
+            color: red;
+        }
+
+        p:empty::before {
+            content: "paragrafo vazio";
+        }
+
+        input[type="text"]:focus {
+            background-color: blue;
+        }
+
+        a:focus, a:hover {
+            background-color: red;
+        }
+
+    </style>
+</head>
+<body>
+    <input type="checkbox" name="contrato" id="contrato">
+    <label for="contrato">Aceito o contrato</label>
+    <button>vai</button>
+    <button disabled>volta</button>
+
+    <p>paragrafo 1</p>
+    <p> </p>
+    <p></p>
+
+    <input type="text" name="texto" id="texto">
+
+    <ul>
+        <li><a href="#">link falso</a></li>
+        <li><a href="#">link falso</a></li>
+        <li><a href="#">link falso</a></li>
+        <li><a href="#">link falso</a></li>
+    </ul>
+
+    <div tabindex="1">div 1</div>
+    <div tabindex="2">div 2</div>
+    <div tabindex="3">div 3</div>
+</body>
+</html>
