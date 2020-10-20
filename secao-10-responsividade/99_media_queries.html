@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries</title>
+
+    <style>
+        body {
+            background-color: yellow;
+        }
+
+        .teste {
+            background-color: red;
+            width: 320px;
+            height: 50px;
+        }
+
+        .container {
+            background-color: white;
+            padding: 15px;
+        }
+
+        .container div {
+            background-color: #ccc;
+            margin-bottom: 15px;
+        }
+
+        .container div:last-child {
+            margin-bottom: 0;
+        }
+
+        .clearfix::after {
+            content: " ";
+            display: table;
+            clear: both;
+        }
+
+        @media screen and (min-width: 400px) {
+            body {
+                background-color: teal;
+            }
+
+            .container div {
+                width: calc(50% - 30px);
+                float: left;
+                margin: 15px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Exemplo de Media Queries</h1>
+
+    <p>Parágrafo qualquer</p>
+    <div class="teste"></div>
+
+    <div class="container clearfix">
+        <div>div0</div>
+        <div>div2</div>        
+    </div> 
+</body>
+</html>

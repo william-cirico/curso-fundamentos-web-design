@@ -1,0 +1,134 @@
+<!doctype html>
+<!-- doctype informa ao agente de usuario a versão do html que deve ser renderizada-->
+<html lang="pt-br">
+    <head>
+        <title> pagina de exemplo estrutura basica </title>
+        <meta charset="utf-8">
+        <meta name="author" content="Daniel">
+        <meta name="description" content="descrição bacanuda">
+        <meta name="keywords" content="html5, tecnologia">
+        <meta name="viewport" content="width=device-width">
+        
+        <style>
+            #grupo-cores{
+                padding: 15px;
+                background: url(imagens/tile.png);
+                counter-reset: contador;
+            }
+
+            #grupo-cores div{
+                counter-increment: contador;
+                width: 80%;
+                height: 150px;
+                border: 10px solid rgba(0,0,0,.5);
+                margin: 20px auto;
+                padding: 15px;               
+            }
+            
+            #grupo-cores div::before {
+                content: "["counter(contador)"]";
+            }
+            
+            #grupo-cores div:nth-child(2) {
+                background-color: blueviolet;
+                background-clip: padding-box;
+            }
+
+            #grupo-cores div:nth-of-type(3) {
+                background-color: rgba(50%, 50%, 45%, 0.9);
+                background-clip: padding-box;
+            }
+
+            #grupo-cores div:nth-of-type(4) {
+                background-color: hsl(0deg, 50%, 50%);
+                background-clip: padding-box;
+            }
+
+            #grupo-cores div:nth-of-type(5) {
+                background-color: hsl(120deg, 100%, 20%);
+                background-clip: padding-box;
+            }
+
+            #grupo-cores div:nth-of-type(6) {
+                background-image: linear-gradient(to left, blue, transparent);
+                background-clip: padding-box;
+            }
+
+            #grupo-cores div:nth-of-type(7) {
+                background-image: radial-gradient(circle, red, blue);
+                background-clip: padding-box;
+            }
+
+            #grupo-cores div:nth-of-type(8) {
+                background-image: radial-gradient(circle, red, blue 20%, yellow 50%, green);
+                background-clip: padding-box;
+            }
+
+            #grupo-cores div:nth-of-type(9) {
+                background-image: radial-gradient(closest-side at 20% 50%, red, blue 20%, yellow 50%, green);
+                background-clip: padding-box;
+            }
+
+            #grupo-cores div:nth-of-type(10) {
+                background-image: radial-gradient(farthest-side at 20% 50%, red, blue 20%, yellow 50%, green);
+                background-clip: padding-box;
+            }
+
+            #grupo-cores div:nth-of-type(11) {
+                background-image: repeating-linear-gradient(red 0%, yellow 10%, blue 50%);
+                background-clip: padding-box;
+            }
+
+            #grupo-cores div:nth-of-type(12) {
+                background-image: repeating-radial-gradient(red 0%, transparent, blue 33.33%), linear-gradient(rgba(100%, 0%, 0%, .5), blue);
+                background-attachment: scroll fixed;
+                background-clip: padding-box;
+            }
+                        
+        </style>
+    </head>
+    <body>
+        <h2>Backgrounds, cores e gradientes</h2>
+        <p>Names, hexadecimais, RGB, RGBa, HSL, HSLa</p>
+        
+        <div id="grupo-cores">
+            <div class="cores"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum magni, similique facere quas numquam incidunt rem aperiam voluptate eius recusandae!</p></div>
+            <div class="cores"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum magni, similique facere quas numquam incidunt rem aperiam voluptate eius recusandae!</p></div>
+            <div class="cores"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum magni, similique facere quas numquam incidunt rem aperiam voluptate eius recusandae!</p></div>
+            <div class="cores"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum magni, similique facere quas numquam incidunt rem aperiam voluptate eius recusandae!</p></div>
+            <div class="cores"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum magni, similique facere quas numquam incidunt rem aperiam voluptate eius recusandae!</p></div>
+            <div class="cores"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum magni, similique facere quas numquam incidunt rem aperiam voluptate eius recusandae!</p></div>
+            <div class="cores"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum magni, similique facere quas numquam incidunt rem aperiam voluptate eius recusandae!</p></div>
+            <div class="cores"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum magni, similique facere quas numquam incidunt rem aperiam voluptate eius recusandae!</p></div>
+            <div class="cores"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum magni, similique facere quas numquam incidunt rem aperiam voluptate eius recusandae!</p></div>
+            <div class="cores"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum magni, similique facere quas numquam incidunt rem aperiam voluptate eius recusandae!</p></div>
+            <div class="cores"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum magni, similique facere quas numquam incidunt rem aperiam voluptate eius recusandae!</p></div>
+            <div class="cores"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum magni, similique facere quas numquam incidunt rem aperiam voluptate eius recusandae!</p></div>
+            <div class="cores"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum magni, similique facere quas numquam incidunt rem aperiam voluptate eius recusandae!</p></div>
+            <div class="cores"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum magni, similique facere quas numquam incidunt rem aperiam voluptate eius recusandae!</p></div>
+            <div class="cores"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum magni, similique facere quas numquam incidunt rem aperiam voluptate eius recusandae!</p></div>
+            <div class="cores"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum magni, similique facere quas numquam incidunt rem aperiam voluptate eius recusandae!</p></div>
+            <div class="cores"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum magni, similique facere quas numquam incidunt rem aperiam voluptate eius recusandae!</p></div>
+            <div class="cores"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum magni, similique facere quas numquam incidunt rem aperiam voluptate eius recusandae!</p></div>
+            <div class="cores"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum magni, similique facere quas numquam incidunt rem aperiam voluptate eius recusandae!</p></div>
+            <div class="cores"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum magni, similique facere quas numquam incidunt rem aperiam voluptate eius recusandae!</p></div>
+            <div class="cores"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum magni, similique facere quas numquam incidunt rem aperiam voluptate eius recusandae!</p></div>
+            <div class="cores"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum magni, similique facere quas numquam incidunt rem aperiam voluptate eius recusandae!</p></div>
+            <div class="cores"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum magni, similique facere quas numquam incidunt rem aperiam voluptate eius recusandae!</p></div>
+            <div class="cores"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum magni, similique facere quas numquam incidunt rem aperiam voluptate eius recusandae!</p></div>
+            <div class="cores"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum magni, similique facere quas numquam incidunt rem aperiam voluptate eius recusandae!</p></div>
+            <div class="cores"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum magni, similique facere quas numquam incidunt rem aperiam voluptate eius recusandae!</p></div>
+            <div class="cores"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum magni, similique facere quas numquam incidunt rem aperiam voluptate eius recusandae!</p></div>
+            <div class="cores"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum magni, similique facere quas numquam incidunt rem aperiam voluptate eius recusandae!</p></div>
+            <div class="cores"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum magni, similique facere quas numquam incidunt rem aperiam voluptate eius recusandae!</p></div>
+            <div class="cores"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum magni, similique facere quas numquam incidunt rem aperiam voluptate eius recusandae!</p></div>
+            <div class="cores"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum magni, similique facere quas numquam incidunt rem aperiam voluptate eius recusandae!</p></div>
+            <div class="cores"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum magni, similique facere quas numquam incidunt rem aperiam voluptate eius recusandae!</p></div>
+            <div class="cores"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum magni, similique facere quas numquam incidunt rem aperiam voluptate eius recusandae!</p></div>
+            <div class="cores"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum magni, similique facere quas numquam incidunt rem aperiam voluptate eius recusandae!</p></div>
+            <div class="cores"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum magni, similique facere quas numquam incidunt rem aperiam voluptate eius recusandae!</p></div>
+            <div class="cores"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum magni, similique facere quas numquam incidunt rem aperiam voluptate eius recusandae!</p></div>
+            <div class="cores"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum magni, similique facere quas numquam incidunt rem aperiam voluptate eius recusandae!</p></div>
+        </div>
+    </body>
+</html>
