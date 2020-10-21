@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout</title>
+    <style>
+        .grid-container {
+            width: 300px;
+            color: #ccc;
+            background-color: black;
+        }
+
+        .grid-item {
+            font-size: 2em;
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 1em;
+        }
+
+        .grid-item:nth-child(even) {
+            background-color: #999;
+            color: white;
+        }
+
+        .grid-item:nth-child(odd) {
+            background-color: #eee;
+        }
+
+        /* GRID */
+        .grid-container {
+            display: grid;
+            /* grid-template-columns: repeat(3, 90px); */
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 200px);
+            /* grid-row-gap: 10px;
+            grid-column-gap: 10px; */
+            grid-gap: 10px;
+        }
+
+        .grid-item:nth-child(1) {
+            background-color: red;
+            /* grid-row-start: 1;
+            grid-row-end: 2;
+            grid-column-start: 1;
+            grid-column-end: -1; */
+            grid-row: 1 / 2;
+            grid-column: 1 / -1;
+            /* grid-column: 2 / span 2 */
+        }
+
+        .grid-item:nth-child(2) {
+            grid-row: 2 / span 2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Grid Layout</h1>
+
+    <div class="grid-container">
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+        <div class="grid-item">4</div>
+        <div class="grid-item">5</div>
+        <div class="grid-item">6</div>
+    </div>
+</body>
+</html>

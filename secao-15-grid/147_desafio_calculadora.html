@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+
+    <style>
+        #calculator {
+            font-family: Arial, Helvetica, sans-serif;
+            width: 80%;
+            margin: auto;                       
+            background-image: linear-gradient(to left top, grey, #ccc);
+            padding: 2em;
+            border-radius: 15px;
+            box-shadow: 1px 1px 5px, -1px -1px 5px;
+
+            display: grid;
+            grid-gap: 1em;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: auto repeat(5, 70px);           
+        }
+
+        #display {
+            text-align: right;            
+            font-size: 2em;
+            border-top: 2px solid white;
+            border-left: 2px solid white;
+            padding: 1em;
+            background-image: linear-gradient(to bottom, #bbb, #ccc);
+            grid-column: 1 / -1;
+            margin-bottom: 15px;
+        }
+
+        button[id="button-0"], button[id="button-mais"] {
+            background-color: #adadad;
+        }
+
+        #button-0 {
+            grid-column:  span 2;
+        }
+
+        #button-mais {
+            grid-row: span 2;
+        }
+
+        
+
+                
+    </style>
+</head>
+<body>
+    <div id="calculator">
+        <div id="display">0</div>
+        <button>AC</button> <button>%</button> <button>X</button> <button>/</button>
+        <button>7</button> <button>8</button> <button>9</button> <button>=</button>        
+        <button>4</button> <button>5</button> <button>6</button> <button>-</button>
+        <button>1</button> <button>2</button> <button>3</button> <button id="button-mais">+</button>
+        <button id="button-0">0</button> <button>,</button>
+    </div>
+</body>
+</html>
