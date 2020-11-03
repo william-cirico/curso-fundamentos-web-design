@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas</title>
+
+    <style>
+        .done {
+            text-decoration: line-through;
+            color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Lista de Tarefas</h1>
+        
+        <input type="text" name="txtTask" id="txtTask">
+        <button id="btn">Cadastrar tarefa</button>
+        <ul>
+            <li>Estudar JS - DOM</li>
+            <li>Estudar eventos em JS</li>
+            <li>Jogar video-game</li>
+        </ul>
+    </div>
+
+    <script>
+        (function() {
+            'use strict';
+            var ul = document.querySelector('ul');
+            var lis = ul.querySelectorAll('li');
+            var txtTask = document.getElementById('txtTask');
+            var btn = document.getElementById('btn');
+            
+            btn.addEventListener('click', addTask)
+            txtTask.addEventListener('keyup', function(e) {
+                // console.log(e.keyCode)
+                // console.log(e.key)
+                if (e.keyCode == 13) {
+                    addTask();
+                }
+            })
+
+            // for (let i = 0; i < lis.length; i++) {
+            //     addEvent(lis[i])
+            // }
+            ul.addEventListener('click', function(e) {
+                if (e.target.nodeName == 'LI') {
+                    toogleDone(e.target);
+                    removeTask(e.target);
+                }
+            });
+
+            function addTask() {
+                // var task = `<li>${txtTask.value}</li>`;
+                // ul.innerHTML += task;
+                var li = document.createElement('li');
+                var text = document.createTextNode(txtTask.value);
+                li.appendChild(text);
+                ul.appendChild(li);
+                // addEvent(li);
+                
+                txtTask.value = '';
+                txtTask.focus();                
+            }
+
+            function toogleDone(li) {
+                li.classList.toggle('done');
+            }
+
+            function removeTask(li) {
+                if (confirm('Deseja excluir?')) {
+                    li.parentNode.removeChild(li);
+                }
+            } 
+            // function addEvent(li) {
+            //     li.addEventListener('click', toogleDone)
+            // }
+        })();
+    </script>
+</body>
+</html>
