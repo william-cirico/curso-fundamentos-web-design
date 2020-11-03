@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMC</title>
+
+    <script>
+        // Função que retorne o IMC
+        (function() {
+            var peso = parseFloat(prompt('Digite seu peso: '))
+            var altura = parseFloat(prompt('Digite sua altura: '))
+
+            function calcularIMC(peso, altura) {
+                return peso / (altura ** 2);
+            }
+
+            function classificarIMC(imc) {
+                if (imc <= 16.9) {
+                    alert('Muito abaixo do peso');
+                } else if (imc <= 18.4) {
+                    alert('Abaixo do peso');
+                } else if (imc <= 24.9) {
+                    alert('Peso normal');
+                } else if (imc <= 29.9) {
+                    alert('Acima do peso');
+                } else if (imc <= 34.9) {
+                    alert('Obesidade Grau I');
+                } else if (imc <= 40) {
+                    alert('Obesidade Grau II');
+                } else {
+                    alert('Obesidade Grau III');
+                }
+            }
+
+            var imc = calcularIMC(peso, altura);
+            classificarIMC(imc);
+        })();
+
+        // Recebe o IMC e retorna a string com a classificação
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

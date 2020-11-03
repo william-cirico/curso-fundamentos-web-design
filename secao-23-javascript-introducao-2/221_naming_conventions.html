@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        // Variáveis devem ser escritas em camelCase:
+        var firstName = 'William';
+        // É aconselhavel o uso dos prefixos: is, are e has em variáveis booleanas
+        var isVisible = true;
+        var areEqual = false;
+        var hasEncryption = true;
+        // Funções seguem a mesma conveção das variáveis:
+        function getName(firstName, lastName) {
+            return `${firstName} ${lastName}`;
+        }
+        // Classes devem ser escritas em PascalCase:
+        class SoftwareDeveloper {
+            constructor(firstName, lastName) {
+                this.firstName = firstName;
+                this.lastName = lastName;
+            }
+        }
+
+        var me = new SoftwareDeveloper('William', 'Círico')
+
+        // Constantes devem ser escritas em UPPERCASE:
+        const SEGUNDOS = 60;
+        const MINUTOS = 60;
+        const HORAS = 24;
+
+        // Para nomear arquivos JS para o frontend é utilizado PascalCase:
+        // UserProfile.js
+        // UserList.js
+        // Para nomear arquivos JS para o backend é utilizado kebab-case:
+        // user-route.js
+        // messages-route.js
+
+        // Diferença entre var, let e const:
+        // * const: Para definir constantes (Uma variável que não deve sofrer alterações)
+        const DIA = 1;
+        // * var: Defini uma variável que é afetada pelo hoisting ou seja pode ser 
+        // usada antes de ser declarada. Isso acontece pois ela é içada ao topo do
+        // seu contexto de execução
+        function testeVar() {
+            mensagem = 'Teste';
+            console.log(mensagem)
+            var mensagem // Será içada até o topo da função e portanto "Teste" será exibido.
+        }
+        // * let: Declara uma variável com escopo de bloco, ou seja só pode ser utilizada
+        // dentro do bloco em que foi declarada
+        function testeLet() {
+            if (true) {
+                let variableLet = 'Oi';                
+            }
+            console.log(variableLet); // Nada será impresso.
+        }
+
+    </script>
+    <title>Naming Conventions in JS</title>
+</head>
+<body>
+    
+</body>
+</html>

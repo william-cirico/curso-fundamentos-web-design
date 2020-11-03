@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tratando Exceções</title>
+</head>
+<body>
+    <h1>Tratando Exceções</h1>
+
+    <button onclick="testar()">Teste</button>
+    <script>
+        var numero = prompt('Digite um numero: ')
+
+        function testar() {  
+            try {
+                if (numero == '0') {
+                    throw new Error('Número é 0')
+                }
+            } catch(e) {
+                console.log(e)
+            }
+        }
+    </script>
+</body>
+</html>

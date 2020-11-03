@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introdução JavaScript</title>
+</head>
+<body>
+    <h1>Introdução JavaScript</h1>
+    
+    <script>
+        var jogador1 = parseFloat(prompt("Digite um número: "))
+        //typeof numero1
+        var jogador2 = parseFloat(prompt("Digite outro número: "))
+        //typeof numero2
+        if (jogador1 == jogador2) {
+            alert("Empate!")
+        } else {
+            var random_number = parseInt(Math.random() * 2)
+
+            if (random_number == 0) {
+                if (jogador1 < jogador2) {
+                    alert('Jogador 1 ganhou!')
+                } else {
+                    alert('Jogador 2 ganhou!')
+                }
+            } else {
+                if (jogador1 > jogador2) {
+                    alert('Jogador 1 ganhou!')
+                } else {
+                    alert('Jogador 2 ganhou!')
+                }
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM - Problemas</title>
+</head>
+<body>
+    <h1>Curso JS</h1>
+    <label for="nome">Nome:</label>
+    <input type="text" name="nome" id="nome" placeholder="Digite seu nome">
+    <label for="sobrenome">Sobrenome:</label>
+    <input type="text" name="sobrenome" id="sobrenome" placeholder="Digite seu sobrenome">
+    <button onclick="mostrarMsg()">Mostrar</button>
+    <div id="msg"></div>
+
+    <script>
+        var firstName = 'William';
+        var lastName = 'Círico';
+
+        document.querySelector("#nome").value = firstName;
+        document.querySelector("#sobrenome").value = lastName;
+
+        function mostrarMsg() {
+            var nome = document.querySelector("#nome").value;
+            var sobrenome = document.querySelector("#sobrenome").value;
+            if (nome) {
+                document.querySelector("#msg").innerHTML = `Bem-Vindo <b>${nome} ${sobrenome}</b>`;
+                document.querySelector("#nome").disabled = true;
+                document.querySelector("#sobrenome").disabled = true;
+            } else {
+                alert("Digite um nome!")
+            }
+        }
+    </script>
+</body>
+</html>

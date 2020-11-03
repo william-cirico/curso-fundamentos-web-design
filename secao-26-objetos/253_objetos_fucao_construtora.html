@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos Construtores</title>
+</head>
+<body>
+    <script>
+
+        (function() {
+            'use strict';
+            window.Caneta = function(preco, cor) {            
+                this.preco = preco || 1;
+                // Atributo privado
+                var cor = cor || 'black';            
+                this.mudarCor = function(newColor) {                
+                    cor = newColor;
+                }
+
+                this.mostrarCor = function() {
+                    return cor;
+                }
+            }
+
+            var caneta1 = new Caneta(10, 'red');
+        })();
+        
+    </script>
+</body>
+</html>

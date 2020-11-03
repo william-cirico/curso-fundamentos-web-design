@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Level 2</title>
+</head>
+<body>
+    <button id="btn1">clicar 1</button>
+    <button id="btn2">clicar 2</button>
+    <script>
+        function clicar() {
+            alert('Clicou!');
+        }
+
+        var btn1 = document.getElementById('btn1');
+        var btn2 = document.getElementById('btn2');
+        
+        // Evento e função        
+        btn1.addEventListener('click', clicar);
+        btn2.addEventListener('click', clicar);
+    </script>
+</body>
+</html>

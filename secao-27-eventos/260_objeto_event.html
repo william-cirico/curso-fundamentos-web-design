@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objeto Evento</title>
+</head>
+<body>
+    <button id="btn1">Olá</button>
+    <script>
+        document.addEventListener('click', function(e) {
+            console.log('Clicou no document');
+            console.log(e.currentTarget);
+            console.log(this);
+            console.log(e.target);
+            e.stopPropagation();
+        })
+    </script>
+</body>
+</html>

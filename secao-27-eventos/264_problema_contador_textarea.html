@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problema TextArea</title>
+</head>
+<body>
+    <textarea name="msg" id="msg" cols="30" rows="10" maxlength="200"></textarea>
+    <p style="display: none;" id="msgResta">Restam <span id="spn">200</span> caracteres</p>
+
+    <script>
+        (function() {
+            var msgResta = document.getElementById('msgResta');
+            msgResta.style.display = 'block';
+            var txtarea = document.getElementById('msg');
+            var span = document.getElementById('spn');
+            var areaLength = txtarea.maxLength;
+            // txtarea.addEventListener('keypress', keyPress);
+            // txtarea.addEventListener('keyup', keyUp);
+            // txtarea.addEventListener('keydown', keyDown);
+            txtarea.addEventListener('input', checkLength);
+
+            function checkLength(e) {
+                var quantidadeLetras = this.value.length;
+                span.textContent = areaLength - quantidadeLetras;
+            }
+        })();
+        
+        // function keyPress(e) {
+        //     console.log(`KeyPress ${this.value}`);
+        // }
+
+        // function keyUp(e) {
+        //     console.log(`KeyUp ${this.value}`);
+        // }
+
+        // function keyDown(e) {
+        //     console.log(`KeyDown ${this.value}`);
+        // }
+
+        // function input(e) {
+        //     console.log(`Input ${this.value}`);
+        // }
+    </script>
+</body>
+</html>

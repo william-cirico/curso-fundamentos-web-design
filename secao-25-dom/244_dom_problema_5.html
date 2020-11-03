@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM - Problema 5</title>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        table {
+            border-collapse: collapse;
+            border: 2px solid black;
+        }
+
+        th {
+            background-color: #ddd;
+        }
+
+        td, th {
+            padding: 1em;
+            border: 1px solid black;
+            text-align: center;
+        }
+
+        tr:nth-child(even) td {
+            background-color: #eee;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>DOM - Problema 5</h1>
+    <h2>Média dos alunos</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Nota 1</th>
+                <th>Nota 2</th>
+                <th>Nota 3</th>
+                <th>Nota 4</th>
+                <th>Média</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Gertrude</td>
+                <td class="n1">10</td>
+                <td class="n2">8.5</td>
+                <td class="n3">9</td>
+                <td class="n4">7.5</td>
+                <td class="media"></td>
+            </tr>
+            <tr>
+                <td>Rey</td>
+                <td class="n1">5</td>
+                <td class="n2">8.5</td>
+                <td class="n3">6.5</td>
+                <td class="n4">7.5</td>
+                <td class="media"></td>
+            </tr>
+            <tr>
+                <td>Jéssica</td>
+                <td class="n1">8</td>
+                <td class="n2">8.5</td>
+                <td class="n3">7</td>
+                <td class="n4">7.5</td>
+                <td class="media"></td>
+            </tr>
+            <tr>
+                <td>Lohane</td>
+                <td class="n1">6.5</td>
+                <td class="n2">8.5</td>
+                <td class="n3">10</td>
+                <td class="n4">7.5</td>
+                <td class="media"></td>
+            </tr>
+            <tr>
+                <td>Letícia</td>
+                <td class="n1">10</td>
+                <td class="n2">9.5</td>
+                <td class="n3">10</td>
+                <td class="n4">8</td>
+                <td class="media"></td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <script>
+        (function() {
+            var trs = document.querySelectorAll("table tbody tr");
+
+            for (let i = 0; i < trs.length; i++) {                
+                var n1 = parseFloat(trs[i].querySelector('.n1').textContent);
+                var n2 = parseFloat(trs[i].querySelector('.n2').textContent);
+                var n3 = parseFloat(trs[i].querySelector('.n3').textContent);
+                var n4 = parseFloat(trs[i].querySelector('.n4').textContent);
+                var media = (n1 + n2 + n3 + n4) / 4; 
+                trs[i].querySelector('.media').textContent = media.toFixed(2);
+            }            
+        })();
+    </script>
+</body>
+</html>

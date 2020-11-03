@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iterar sobre arrays</title>
+</head>
+<body>
+    <div id="output"></div>
+    <script>
+        var produto = ['caneta', 'lapis', 'tesoura', 'borracha', 'caderno'];
+
+        var output = document.querySelector('#output');
+
+        var msg = '';
+        
+        for (let i = 0; i < produto.length; i++) {
+            const element = produto[i];
+            msg += "Produto " + (i + 1) + ": " + element + '<br>';
+        }
+
+        output.innerHTML = msg;
+    </script>
+</body>
+</html>

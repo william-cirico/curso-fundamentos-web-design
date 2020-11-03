@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcular Média</title>
+
+    <script>
+        (function() {
+            function calcularMedia() {
+                var qtdNotas = arguments.length
+                var soma = 0;
+                
+                for (let i = 0; i < qtdNotas; i++) {
+                    soma += arguments[i];
+                }
+
+                return soma / qtdNotas;
+            }
+
+            var media1 = calcularMedia(2, 3);
+            var media2 = calcularMedia(10, 8, 3);  
+
+            console.log(media1)          
+            console.log(media2)          
+        })();
+
+        
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

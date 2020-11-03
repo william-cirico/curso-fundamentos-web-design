@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções</title>
+</head>
+<body>
+    <h1>Calculadora</h1>
+    <button onclick="soma()">+</button>
+    <button onclick="subtrai()">-</button>
+    <button onclick="multiplica()">*</button>
+    <button onclick="divide()">/</button>
+
+    <div id="output"></div>
+
+    <script>
+        var numero1 = parseInt(prompt('Digite um número:'))
+        var output = document.querySelector('#output');   
+        output.innerHTML = numero1     
+
+        function soma() {
+            var numero2 = parseInt(prompt('Digite outro número'))
+
+            var resultado = numero1 + numero2
+            output.innerHTML = resultado
+            numero1 = resultado
+        }
+
+        function subtrai() {
+            var numero2 = parseInt(prompt('Digite outro número'))
+
+            var resultado = numero1 - numero2
+            output.innerHTML = resultado
+            numero1 = resultado
+        }
+
+        function multiplica() {
+            var numero2 = parseInt(prompt('Digite outro número'))
+
+            var resultado = numero1 + numero2
+            output.innerHTML = resultado
+            numero1 = resultado
+        }
+
+        function divide() {
+            var numero2 = parseInt(prompt('Digite outro número'))
+
+            var resultado = numero1 / numero2
+            output.innerHTML = resultado
+            numero1 = resultado
+        }
+
+        
+
+    </script>
+</body>
+</html>

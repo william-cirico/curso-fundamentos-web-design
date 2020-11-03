@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício</title>
+</head>
+<body>
+    <div id="output"></div>
+    <script>
+        var output = document.querySelector('#output');
+
+        produtos = [
+            {
+                nome: 'Playstation 5',
+                preco: 5000.00,
+                estoque: 10
+            },
+            {
+                nome: 'Iphone X',
+                preco: 10000.00,
+                estoque: 5
+            }
+        ];
+
+        // Método do Objeto
+        produtos.removerUltimo = function() {
+            produtos.pop();
+            console.log(this)
+        }
+
+        var msg = ""
+
+        for (let i = 0; i < produtos.length; i++) {
+            const produto = produtos[i];
+            msg += "<h2>" + produto.nome + "</h2>"
+            msg += "<p>Preço: " + produto.preco + "</p>"
+            msg += "<p>Estoque: " + produto.estoque + "</p>"
+        }
+
+        output.innerHTML = msg
+
+    </script>
+</body>
+</html>

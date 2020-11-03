@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos Customizados</title>
+</head>
+<body>
+    <script>
+
+        function mudarCor(cor) {
+            this.cor = cor;
+        }
+
+        var caneta1 = {
+            cor: 'red',
+            mudarCor: mudarCor
+        }
+
+
+        caneta1.mudarCor('green');
+        console.log(caneta1.cor)
+    </script>
+</body>
+</html>

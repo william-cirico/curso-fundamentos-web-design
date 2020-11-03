@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Especificidade</title>
+
+    <style>
+        #jumbotron {
+            background-color: rgba(0, 0, 0, .5);
+        }
+
+        #jumbotron__title {
+            color: white;
+        }
+
+        #jumbotron__text {
+            color: red;
+        }
+
+        p {
+            /* color: green !important; */
+            color: red;
+        }
+
+        /* BEM - Block Element Modifier*/
+    </style>
+</head>
+<body>
+    <h1>Meu CSS não funciona</h1>
+
+    <div id="jumbotron">
+        <h2 class="jumbotron__title">subtitulo</h2>
+        <p class="jumbotron__text">paragrafos</p>
+    </div>
+
+    <p class="destaque">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, eum. Neque, 
+        asperiores voluptatibus recusandae deserunt id repudiandae aliquid nihil 
+        molestias a dolores mollitia? Aut exercitationem veritatis eligendi eveniet 
+        distinctio quo!</p>
+        <p class="destaque" id="unico">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, eum. Neque, 
+        asperiores voluptatibus recusandae deserunt id repudiandae aliquid nihil 
+        molestias a dolores mollitia? Aut exercitationem veritatis eligendi eveniet 
+        distinctio quo!</p>
+</body>
+</html>
