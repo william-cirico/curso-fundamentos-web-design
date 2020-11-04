@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio</title>
+    <script>
+        (function() {
+            window.addEventListener('load', init);
+
+            function init() {
+                var paragrafos = document.querySelectorAll('p');
+
+                for (let i = 0; i < paragrafos.length; i++) {
+                    paragrafos[i].innerHTML = formatarTexto(paragrafos[i].innerHTML);
+
+                }
+            }
+
+            function formatarTexto(texto) {
+                if (texto.length <= 200) return texto;
+
+                var subTexto = texto.slice(0, 200);
+                return subTexto + '...';
+            }
+        })();
+    </script>
+</head>
+<body>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam praesentium 
+        deserunt molestias nam veritatis veniam quo modi voluptates consequuntur, 
+        aliquam laudantium, eius consequatur ipsam! Architecto placeat ut cum odio 
+        consectetur?
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam praesentium 
+        deserunt molestias nam veritatis veniam quo modi voluptates consequuntur, 
+        aliquam laudantium, eius consequatur ipsam! Architecto placeat ut cum odio 
+        aliquam laudantium, eius consequatur ipsam! Architecto placeat ut cum odio
+        aliquam laudantium, eius consequatur ipsam! Architecto placeat ut cum odio
+        aliquam laudantium, eius consequatur ipsam! Architecto placeat ut cum odio
+        aliquam laudantium, eius consequatur ipsam! Architecto placeat ut cum odio
+        aliquam laudantium, eius consequatur ipsam! Architecto placeat ut cum odio
+        aliquam laudantium, eius consequatur ipsam! Architecto placeat ut cum odio
+        aliquam laudantium, eius consequatur ipsam! Architecto placeat ut cum odio
+        aliquam laudantium, eius consequatur ipsam! Architecto placeat ut cum odio
+        consectetur?
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam praesentium 
+        deserunt molestias nam veritatis veniam quo modi voluptates consequuntur, 
+        aliquam laudantium, eius consequatur ipsam! Architecto placeat ut cum odio 
+        consectetur?
+    </p>
+</body>
+</html>
