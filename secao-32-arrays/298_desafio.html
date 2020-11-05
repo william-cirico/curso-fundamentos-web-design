@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 1</title>
+</head>
+<body>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus 
+        magni odit, illo, sunt, quasi voluptatum quos eligendi modi repellat 
+        quaerat accusantium amet a facere nesciunt est corporis suscipit 
+        praesentium sint.
+    </p>
+    <script>        
+        var paragrafos = document.querySelectorAll('p');
+
+        for (var i = 0, len = paragrafos.length; i < len; i++) {
+            paragrafos[i].innerHTML = formataParafrafo(paragrafos[i].innerHTML);
+        }
+
+        function formataParafrafo(texto) {
+            var palavras = texto.split(' ');
+            
+            if (palavras.length > 10) {
+                return palavras.slice(0, 10),join(' ') + '...';
+            }
+
+            return texto;
+        }
+    </script>
+</body>
+</html>

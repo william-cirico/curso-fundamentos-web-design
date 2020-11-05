@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data no padrão Brasil</title>
+</head>
+<body>
+    <script>
+        (function() {
+            var data = new Date();
+
+            var dia = data.getDate();
+            dia = dia < 10 ? '0' + dia : dia;
+            var mes = data.getMonth();
+            mes = mes < 10 ? '0' + mes : mes;
+
+            function formataData(data) {                
+                return `${dia}/${mes}/${data.getFullYear()}`
+            }
+
+            console.log(formataData(data))
+        })();
+    </script>
+</body>
+</html>

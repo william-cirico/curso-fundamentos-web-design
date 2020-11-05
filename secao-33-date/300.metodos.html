@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date</title>
+</head>
+<body>
+    <script>
+        // Criando uma data com os valores atuais
+        var minhaData = new Date();
+        console.log(minhaData)
+
+        // getDay() - Dia da semana
+        console.log(minhaData.getDay());
+
+        // getDate() - Dia do mês
+        console.log(minhaData.getDate());
+
+        // getMonth  - Mês do ano
+        console.log(minhaData.getMonth());
+
+        // getFullYear() - Ano atual
+        console.log(minhaData.getFullYear());
+
+        // getHours() - Hora atual
+        console.log(minhaData.getHours());
+
+        // getMinutes() - Minuto atual
+        console.log(minhaData.getMinutes());
+
+        // getTime() - TimeStamp
+        console.log(minhaData.getTime());
+
+        // Criando um timestamp
+        var timestamp = +new Date();
+
+        // setTime() - Setando o TimeStamp
+        minhaData.setTime(0);
+
+        // setDate() - Setando o dia do mês
+        minhaData.setDate(23);
+
+        // setMonth() - Setando o mês do ano
+        minhaData.setMonth(10);
+
+        // setYear() - Setando o ano
+        minhaData.setFullYear(2020);
+
+        // setHours() - Setando hora atual
+        console.log(minhaData.setHours(1));
+
+        // setMinutes() - Setando minuto atual
+        console.log(minhaData.setMinutes(5));
+        
+        // Criando data personalizada
+        var outraData = new Date(2020, 11, 23, 10, 10, 0);
+        console.log(outraData);
+
+
+    </script>
+</body>
+</html>
