@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estilos</title>
+
+    <style>
+        .teste {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="teste">olá</div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero et laudantium quod, sapiente dolore a consequatur. Debitis officia fuga nisi commodi nobis velit aliquam, fugiat hic neque totam vitae. Laudantium?</p>
+    <script>
+        var teste = document.querySelector('.teste');
+        var p = document.querySelector('p');
+        // estilo inline
+        console.log(teste.style.background);
+        // todas as regras aplicadas no elemento
+        console.log(getComputedStyle(teste).backgroundColor)
+        // para saber o height e width de um elemento
+        console.log(p.offsetHeight, p.offsetWidth)
+        console.log(p.offsetTop, p.offsetLeft)
+
+    </script>
+</body>
+</html>

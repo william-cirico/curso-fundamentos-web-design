@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="relogio"></div>
+    <script>
+        (function() {
+            var relogio = document.getElementById('relogio');
+
+            function getHour() {
+                var data = new Date();
+                var hora = formata(data.getHours());
+                var minuto = formata(data.getMinutes());
+                var segundo = formata(data.getSeconds());
+
+                return `${hora}:${minuto}:${segundo}`;  
+            }
+
+            function formata(tempo) {
+                return tempo < 10 ? '0' + tempo : tempo;
+            }
+
+            function mostraRelogio(atual) {
+                relogio.textContent = atual
+            }
+
+            setInterval(function() {
+                mostraRelogio(getHour());
+            }
+            , 1000)
+        })();
+    </script>
+</body>
+</html>

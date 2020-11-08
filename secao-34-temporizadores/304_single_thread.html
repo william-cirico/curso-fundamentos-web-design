@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Single Threads</title>
+</head>
+<body>
+    <script>
+        var n = 0;
+
+        function somaUm() {
+            if (n > 5) {
+                clearInterval(intervalo);
+            }
+
+            console.log(`n: ${++n}`);
+        }
+
+        // Executa a função dps do tempo informado em milisegundos
+        setTimeout(somaUm, 1000);
+
+        // Continua executando a função com o tempo informado
+        var intervalo = setInterval(somaUm, 5000);
+
+        var str = '';
+        var timeOutTeste = setTimeout(function() {
+            for (var i = 0; i < 100000; i++) {
+                str += `i: ${i} ---`;
+                console.log(str);
+            }
+        }, 3000)
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problema - banner popup</title>
+
+    <style>
+        .banner {
+            display: none;
+            position: absolute;
+            padding: 15px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            box-shadow: 0 0 0 1000px rgba(0, 0, 0, .8);
+        }
+
+        .banner__close {
+            position: absolute;
+            top: 5px;
+            right: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="banner">
+        <h2>Banner Irritante</h2>
+        <button class="banner__close">X</button>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel natus 
+            optio hic nihil ex ad eaque magni ullam a consequuntur placeat iste 
+            deleniti corrupti nisi voluptatem cumque, aut sed qui.
+        </p>
+    </div>
+
+    <script>
+        (function() {
+            var banner = document.querySelector('.banner');
+            var bannerBtn = document.querySelector('.banner__close');
+
+            bannerBtn.addEventListener('click', escondeBanner);
+
+            function escondeBanner() {
+                bannerBtn.removeEventListener('click', escondeBanner);
+                banner.parentNode.removeChild(banner);
+
+                clearTimeout(intervaloEsconder);               
+            }
+
+            function mostraBanner() {
+                banner.style.display = 'block';                
+                intervaloEsconder = setTimeout(escondeBanner, 5000);
+
+            }
+
+            setTimeout(mostraBanner, 5000);            
+        })();
+    </script>
+</body>
+</html>
